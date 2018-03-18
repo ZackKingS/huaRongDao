@@ -17,11 +17,16 @@ class  SucessViewController :UIViewController {
         
 //        self.view.backgroundColor = UIColor.blue
         
+//        self.view.alpha = 0.5
+        
         
     }
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
         
         dismiss(animated: true, completion: nil)
+        
+        
+        
     }
     
     

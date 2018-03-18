@@ -15,11 +15,14 @@ class ViewController: UIViewController {
     
     var emptyBtn =  UIButton()
     var startArray = [CGPoint]()
-    var numbers = [3,2,1,4,8,6,7,5]
-
-//    var numbers = [1,2,3,4,5,6,7,8]
-//    var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+//    var numbers = [3,2,1,4,8,6,7,5]
     
+    
+    var comBtn = UIButton()
+    
+
+    var numbers = [1,2,3,4,5,6,7,8]
+//    var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 //    var numbers = [1,2,3,4,5,6,8,7]
  
 
@@ -27,10 +30,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        
-      
+    
         setup()
         
     }
@@ -43,7 +43,6 @@ class ViewController: UIViewController {
     func setup(){
         
         let cloumn = 3;
-//        let cloumn = sqrt((numbers.count + 1 ) as! Double )   ;
         let btnWH = 99
         var curClounm = 0 //列
         var curRow = 0    //行
@@ -58,11 +57,11 @@ class ViewController: UIViewController {
             
             curClounm = i % cloumn;
             curRow = i / cloumn;
-            
             x = margin + (margin + btnWH) * curClounm ;
             y = (margin + btnWH) * curRow;
-            
             let btn  = UIButton.init(frame: CGRect.init(x:  x , y: y, width: btnWH, height: btnWH))
+            
+            comBtn = btn
             
             RightArray.append(btn.center)
             
@@ -183,11 +182,18 @@ class ViewController: UIViewController {
      
         if arr.count == 8 {
             
+            print(self.centerView.subviews.count)
+            
+            for  view   in self.centerView.subviews  {
+               let  btn = view  as! UIButton
+                btn.titleLabel?.textColor = UIColor.green
+                
+//                print(  btn.titleLabel?.text)
+            }
             
             
             
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
              
                 self.present(SucessViewController(), animated: true, completion: nil)
                 

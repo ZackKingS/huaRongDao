@@ -195,7 +195,12 @@ class ViewController: UIViewController {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
              
-                self.present(SucessViewController(), animated: true, completion: nil)
+                
+                let sucessVC =   SucessViewController()
+                sucessVC.modalPresentationStyle = UIModalPresentationStyle(rawValue: Int(UInt8(UIModalPresentationStyle.custom.rawValue) ))!
+                     
+                
+                self.present(sucessVC, animated: true, completion: nil)
                 
                 
                 for  view  in self.centerView.subviews {

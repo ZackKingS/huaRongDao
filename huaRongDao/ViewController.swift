@@ -197,8 +197,14 @@ class ViewController: UIViewController {
              
                 
                 let sucessVC =   SucessViewController()
-                sucessVC.modalPresentationStyle = UIModalPresentationStyle(rawValue: Int(UInt8(UIModalPresentationStyle.custom.rawValue) ))!
-                     
+                
+                
+                self.definesPresentationContext = true
+                sucessVC.view.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.5)
+                
+                sucessVC.modalPresentationStyle = UIModalPresentationStyle(rawValue: Int(UInt8(UIModalPresentationStyle.overCurrentContext.rawValue) ))!
+                
+                
                 
                 self.present(sucessVC, animated: true, completion: nil)
                 

@@ -15,15 +15,17 @@ class ViewController: UIViewController {
     
     var emptyBtn =  UIButton()
     var startArray = [CGPoint]()
-//    var numbers = [3,2,1,4,8,6,7,5]
     
+    
+    var numbers = [3,2,1,4,8,6,7,5]
+//    var numbers = [1,2,3,4,5,6,7,8]
+//    var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+//    var numbers = [1,2,3,4,5,6,8,7]
     
     var comBtn = UIButton()
     
 
-    var numbers = [1,2,3,4,5,6,7,8]
-//    var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-//    var numbers = [1,2,3,4,5,6,8,7]
+
  
 
     var RightArray = [CGPoint]()
@@ -33,6 +35,17 @@ class ViewController: UIViewController {
     
         setup()
         
+         NotificationCenter.default.addObserver(self, selector: #selector(playAgain), name: NSNotification.Name(rawValue: "playAgain"), object: nil)
+    }
+    
+    
+   @objc func playAgain() {
+        
+      for  view  in self.centerView.subviews {
+          view.removeFromSuperview()
+      }
+    
+       setup()
     }
 
     func randomElementFromArray<T>(from array: Array<T>) -> T {
@@ -68,6 +81,7 @@ class ViewController: UIViewController {
             if i == 8 {
                 //记录最后一个btn
                 emptyBtn = btn
+                btn.backgroundColor = UIColor.clear
             }else{
                 
                 //设置btn的title   随机取得（1~8） 下一次不重复
@@ -75,7 +89,8 @@ class ViewController: UIViewController {
                 
                btn.setTitle("\(numbers[i])", for: UIControlState.normal)
                btn.tag  = numbers[i]
-           
+                btn.backgroundColor = UIColor.yellow
+                
     
             }
             
@@ -83,7 +98,7 @@ class ViewController: UIViewController {
             btn.setTitleColor(UIColor.black, for: UIControlState.normal)
             btn.titleLabel?.font = UIFont.systemFont(ofSize: 50)
             btn.addTarget(self, action: #selector(tap(_:)), for: UIControlEvents.touchUpInside)
-            btn.backgroundColor = UIColor.yellow
+            
             
             
    
@@ -109,10 +124,16 @@ class ViewController: UIViewController {
         
         if distance == 100  { //如果相邻  (严谨)
             
-            //frame 互换
-            let tempFrame  = btn.frame
-            btn.frame = emptyBtn.frame
-            emptyBtn.frame = tempFrame
+            
+            
+            UIView.animate(withDuration: 1, animations: {
+                //frame 互换
+                let tempFrame  = btn.frame
+                btn.frame = self.emptyBtn.frame
+                self.emptyBtn.frame = tempFrame
+            }, completion: nil)
+            
+           
             
             
         }
@@ -184,12 +205,12 @@ class ViewController: UIViewController {
             
             print(self.centerView.subviews.count)
             
-            for  view   in self.centerView.subviews  {
-               let  btn = view  as! UIButton
-                btn.titleLabel?.textColor = UIColor.green
-                
-//                print(  btn.titleLabel?.text)
-            }
+//            for  view   in self.centerView.subviews  {
+//               let  btn = view  as! UIButton
+//
+//
+//        
+//            }
             
             
             
@@ -209,12 +230,7 @@ class ViewController: UIViewController {
                 self.present(sucessVC, animated: true, completion: nil)
                 
                 
-                for  view  in self.centerView.subviews {
-                    view.removeFromSuperview()
-                }
                 
-                
-                self.setup()
             }
             
             

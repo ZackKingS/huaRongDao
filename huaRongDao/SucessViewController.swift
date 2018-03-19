@@ -21,13 +21,7 @@ class  SucessViewController :UIViewController {
         
         
     }
-    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
-        
-        dismiss(animated: true, completion: nil)
-        
-        
-        
-    }
+  
     
     
     @IBOutlet weak var close: UIButton!
@@ -36,6 +30,10 @@ class  SucessViewController :UIViewController {
     @IBAction func cl(_ sender: Any) {
         
          dismiss(animated: true, completion: nil)
+        
+        
+        NotificationCenter.default.post(Notification.init(name: Notification.Name(rawValue: "playAgain")))
+        
     }
     
     

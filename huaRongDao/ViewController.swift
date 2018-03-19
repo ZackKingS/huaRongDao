@@ -99,7 +99,8 @@ class ViewController: UIViewController {
             btn.setTitleColor(UIColor.white, for: UIControlState.normal)
             btn.titleLabel?.font = UIFont.systemFont(ofSize: 50)
             btn.addTarget(self, action: #selector(tap(_:)), for: UIControlEvents.touchUpInside)
-            
+            btn.layer.cornerRadius = 8
+            btn.layer.masksToBounds = true
             
             
    

@@ -10,14 +10,15 @@ import Foundation
 import UIKit
 class  SucessViewController :UIViewController {
     
+    
+    typealias closureBlock = (String) -> Void
+    var postValueBlock:closureBlock?
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        
-//        self.view.backgroundColor = UIColor.blue
-        
-//        self.view.alpha = 0.5
+ 
         
         
     }
@@ -32,7 +33,11 @@ class  SucessViewController :UIViewController {
          dismiss(animated: true, completion: nil)
         
         
-        NotificationCenter.default.post(Notification.init(name: Notification.Name(rawValue: "playAgain")))
+//        NotificationCenter.default.post(Notification.init(name: Notification.Name(rawValue: "playAgain")))
+        
+        guard let postValueBlock = postValueBlock else { return }
+        postValueBlock("传值到上一页")
+
         
     }
     

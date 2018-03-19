@@ -43,7 +43,7 @@ class ZBViewController: UIViewController {
         
         setup()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(playAgain), name: NSNotification.Name(rawValue: "playAgain"), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(playAgain), name: NSNotification.Name(rawValue: "playAgain"), object: nil)
     }
     
     
@@ -55,14 +55,14 @@ class ZBViewController: UIViewController {
     
     
     
-    @objc func playAgain() {
-        
-        for  view  in self.centerView.subviews {
-            view.removeFromSuperview()
-        }
-        
-        setup()
-    }
+//    @objc func playAgain() {
+//
+//        for  view  in self.centerView.subviews {
+//            view.removeFromSuperview()
+//        }
+//
+//        setup()
+//    }
     
     func randomElementFromArray<T>(from array: Array<T>) -> T {
         let index: Int = Int(arc4random_uniform(UInt32(array.count)))
@@ -249,6 +249,15 @@ class ZBViewController: UIViewController {
                 
                 sucessVC.modalPresentationStyle = UIModalPresentationStyle(rawValue: Int(UInt8(UIModalPresentationStyle.overCurrentContext.rawValue) ))!
                 
+                
+                
+                sucessVC.postValueBlock = { (str) in
+                    for  view  in self.centerView.subviews {
+                        view.removeFromSuperview()
+                    }
+                    
+                    self.setup()
+                }
                 
                 
                 self.present(sucessVC, animated: true, completion: nil)

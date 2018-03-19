@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class ViewController: UIViewController {
 
@@ -89,13 +90,13 @@ class ViewController: UIViewController {
                 
                btn.setTitle("\(numbers[i])", for: UIControlState.normal)
                btn.tag  = numbers[i]
-                btn.backgroundColor = UIColor.yellow
+                btn.backgroundColor = UIColor.init(red: 128/255.0, green: 168/255.0, blue: 193/255.0, alpha: 1.0)
                 
     
             }
             
             
-            btn.setTitleColor(UIColor.black, for: UIControlState.normal)
+            btn.setTitleColor(UIColor.white, for: UIControlState.normal)
             btn.titleLabel?.font = UIFont.systemFont(ofSize: 50)
             btn.addTarget(self, action: #selector(tap(_:)), for: UIControlEvents.touchUpInside)
             
@@ -113,7 +114,20 @@ class ViewController: UIViewController {
 
     }
     
-    
+    func playMusic (){
+        
+        var soundID:SystemSoundID = 0
+        
+        // 加载文件
+        let fileUrl = NSURL(fileURLWithPath: Bundle.main.path(forResource: "sound", ofType: "mp3")!)
+        AudioServicesCreateSystemSoundID(fileUrl, &soundID)
+        
+        // 播放短频音效
+        AudioServicesPlayAlertSound(soundID)
+        
+        // 增加震动效果，如果手机处于静音状态，提醒音将自动触发震动
+        //        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate));
+    }
     @objc func tap (_ btn:UIButton){
     
         
@@ -124,7 +138,7 @@ class ViewController: UIViewController {
         
         if distance == 100  { //如果相邻  (严谨)
             
-            
+            playMusic()
             
             UIView.animate(withDuration: 1, animations: {
                 //frame 互换

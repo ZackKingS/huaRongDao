@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZBViewController" customModule="huaRongDao" customModuleProvider="target">
+            <connections>
+                <outlet property="centerView" destination="TWm-ZF-u2c" id="SkT-aC-c2G"/>
+                <outlet property="view" destination="iN0-l3-epB" id="5TP-s2-UnP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3H-nc-E7X">
+                    <rect key="frame" x="7.5" y="153.5" width="360" height="360"/>
+                    <color key="backgroundColor" red="0.95335191488265991" green="0.84882980585098267" blue="0.40983593463897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="360" id="Tz0-dh-LiS"/>
+                        <constraint firstAttribute="height" constant="360" id="aGw-ym-glU"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWm-ZF-u2c">
+                    <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="PRO-qt-H9x"/>
+                        <constraint firstAttribute="height" constant="300" id="p8i-zf-2Q5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.86696559190750122" green="0.96902436017990112" blue="0.78955316543579102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="x3H-nc-E7X" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="CHT-21-ZdS"/>
+                <constraint firstItem="TWm-ZF-u2c" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="CfL-d0-3zT"/>
+                <constraint firstItem="x3H-nc-E7X" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="k1g-bn-SMC"/>
+                <constraint firstItem="TWm-ZF-u2c" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pef-vd-4l8"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="117.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

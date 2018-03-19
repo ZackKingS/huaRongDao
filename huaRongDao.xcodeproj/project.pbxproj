@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3A38864D205F7117002E1B35 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3A38864C205F7117002E1B35 /* sound.mp3 */; };
+		3A38864F205F76A4002E1B35 /* HomeViewControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38864E205F76A4002E1B35 /* HomeViewControll.swift */; };
+		3A388651205F76AF002E1B35 /* HomeViewControll.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A388650205F76AF002E1B35 /* HomeViewControll.xib */; };
+		3A388655205F7C41002E1B35 /* ZBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A388654205F7C41002E1B35 /* ZBViewController.swift */; };
+		3A388657205F7C4A002E1B35 /* ZBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A388656205F7C4A002E1B35 /* ZBViewController.xib */; };
 		3A549F62205CD0290053135C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A549F61205CD0290053135C /* AppDelegate.swift */; };
-		3A549F64205CD0290053135C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A549F63205CD0290053135C /* ViewController.swift */; };
-		3A549F67205CD0290053135C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A549F65205CD0290053135C /* Main.storyboard */; };
 		3A549F69205CD0290053135C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A549F68205CD0290053135C /* Assets.xcassets */; };
 		3A549F6C205CD0290053135C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A549F6A205CD0290053135C /* LaunchScreen.storyboard */; };
 		3A549F77205CD0290053135C /* huaRongDaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A549F76205CD0290053135C /* huaRongDaoTests.swift */; };
@@ -38,10 +40,12 @@
 
 /* Begin PBXFileReference section */
 		3A38864C205F7117002E1B35 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sound.mp3; path = ../../sound.mp3; sourceTree = "<group>"; };
+		3A38864E205F76A4002E1B35 /* HomeViewControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControll.swift; sourceTree = "<group>"; };
+		3A388650205F76AF002E1B35 /* HomeViewControll.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewControll.xib; sourceTree = "<group>"; };
+		3A388654205F7C41002E1B35 /* ZBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZBViewController.swift; sourceTree = "<group>"; };
+		3A388656205F7C4A002E1B35 /* ZBViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZBViewController.xib; sourceTree = "<group>"; };
 		3A549F5E205CD0290053135C /* huaRongDao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = huaRongDao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A549F61205CD0290053135C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A549F63205CD0290053135C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3A549F66205CD0290053135C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A549F68205CD0290053135C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A549F6B205CD0290053135C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A549F6D205CD0290053135C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,10 +109,12 @@
 			children = (
 				3A38864C205F7117002E1B35 /* sound.mp3 */,
 				3A549F61205CD0290053135C /* AppDelegate.swift */,
-				3A549F63205CD0290053135C /* ViewController.swift */,
+				3A38864E205F76A4002E1B35 /* HomeViewControll.swift */,
+				3A388650205F76AF002E1B35 /* HomeViewControll.xib */,
+				3A388654205F7C41002E1B35 /* ZBViewController.swift */,
+				3A388656205F7C4A002E1B35 /* ZBViewController.xib */,
 				3A549F8F205D1BCB0053135C /* SucessViewController.swift */,
 				3A549F91205D27880053135C /* SucessViewController.xib */,
-				3A549F65205CD0290053135C /* Main.storyboard */,
 				3A549F68205CD0290053135C /* Assets.xcassets */,
 				3A549F6A205CD0290053135C /* LaunchScreen.storyboard */,
 				3A549F6D205CD0290053135C /* Info.plist */,
@@ -241,10 +247,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A388657205F7C4A002E1B35 /* ZBViewController.xib in Resources */,
 				3A549F6C205CD0290053135C /* LaunchScreen.storyboard in Resources */,
 				3A549F69205CD0290053135C /* Assets.xcassets in Resources */,
+				3A388651205F76AF002E1B35 /* HomeViewControll.xib in Resources */,
 				3A549F92205D27880053135C /* SucessViewController.xib in Resources */,
-				3A549F67205CD0290053135C /* Main.storyboard in Resources */,
 				3A38864D205F7117002E1B35 /* sound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,7 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A549F90205D1BCB0053135C /* SucessViewController.swift in Sources */,
-				3A549F64205CD0290053135C /* ViewController.swift in Sources */,
+				3A388655205F7C41002E1B35 /* ZBViewController.swift in Sources */,
+				3A38864F205F76A4002E1B35 /* HomeViewControll.swift in Sources */,
 				3A549F62205CD0290053135C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,14 +316,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3A549F65205CD0290053135C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A549F66205CD0290053135C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3A549F6A205CD0290053135C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

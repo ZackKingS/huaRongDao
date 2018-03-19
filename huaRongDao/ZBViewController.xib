@@ -40,7 +40,7 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLG-9o-9QU">
                     <rect key="frame" x="16" y="27" width="62" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="&lt;">
+                    <state key="normal" title="返回">
                         <color key="titleColor" red="1" green="0.68946105238808819" blue="0.047552760026004393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>

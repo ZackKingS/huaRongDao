@@ -47,6 +47,14 @@ class ZBViewController: UIViewController {
     }
     
     
+    @IBAction func pop(_ sender: Any) {
+        
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
     @objc func playAgain() {
         
         for  view  in self.centerView.subviews {
@@ -125,16 +133,10 @@ class ZBViewController: UIViewController {
     func playMusic (){
         
         var soundID:SystemSoundID = 0
-        
-        // 加载文件
         let fileUrl = NSURL(fileURLWithPath: Bundle.main.path(forResource: "sound", ofType: "mp3")!)
         AudioServicesCreateSystemSoundID(fileUrl, &soundID)
-        
-        // 播放短频音效
         AudioServicesPlayAlertSound(soundID)
-        
-        // 增加震动效果，如果手机处于静音状态，提醒音将自动触发震动
-        //        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate));
+      //AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate));
     }
     @objc func tap (_ btn:UIButton){
         
@@ -144,7 +146,7 @@ class ZBViewController: UIViewController {
         let distance =   sqrt(pow(distance_x, 2) + pow(distance_y, 2))
         
         
-        if distance == 100  { //如果相邻  (严谨)
+        if distance == (  CGFloat(  300 / cloumn  )   ) { //如果相邻  (严谨)
             
             playMusic()
             

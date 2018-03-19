@@ -20,33 +20,58 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFQ-hp-pqG">
-                    <rect key="frame" x="84" y="218" width="30" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="3x3"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WechatIMG9.png" translatesAutoresizingMaskIntoConstraints="NO" id="v0f-YO-jZI">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFQ-hp-pqG">
+                    <rect key="frame" x="56" y="235" width="70" height="81"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="81" id="TSm-pa-l22"/>
+                        <constraint firstAttribute="width" constant="70" id="XY7-OD-bYW"/>
+                    </constraints>
                     <connections>
                         <action selector="threeClick:" destination="-1" eventType="touchUpInside" id="qLK-DS-NDN"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bec-Hh-IiR">
-                    <rect key="frame" x="243" y="218" width="30" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="5x5"/>
-                    <connections>
-                        <action selector="FiveClick:" destination="-1" eventType="touchUpInside" id="Uza-nF-M8W"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7Z-Eb-SgK">
-                    <rect key="frame" x="172" y="218" width="30" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="4x4"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7Z-Eb-SgK">
+                    <rect key="frame" x="152" y="235" width="72" height="81"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="81" id="fUL-5G-lNV"/>
+                        <constraint firstAttribute="width" constant="72" id="yKP-HA-2mi"/>
+                    </constraints>
                     <connections>
                         <action selector="fourClick:" destination="-1" eventType="touchUpInside" id="Gbr-jb-T5F"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bec-Hh-IiR">
+                    <rect key="frame" x="252" y="235" width="65" height="81"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="81" id="F0L-Wh-xvL"/>
+                        <constraint firstAttribute="width" constant="65" id="vqx-Y7-UNn"/>
+                    </constraints>
+                    <connections>
+                        <action selector="FiveClick:" destination="-1" eventType="touchUpInside" id="Uza-nF-M8W"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bec-Hh-IiR" firstAttribute="leading" secondItem="s7Z-Eb-SgK" secondAttribute="trailing" constant="28" id="0pi-4a-7Uj"/>
+                <constraint firstItem="v0f-YO-jZI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="BgO-SM-D39"/>
+                <constraint firstItem="v0f-YO-jZI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-20" id="LGw-b3-saH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="v0f-YO-jZI" secondAttribute="bottom" id="VFv-MN-K7X"/>
+                <constraint firstItem="UFQ-hp-pqG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="215" id="i13-ji-U5H"/>
+                <constraint firstItem="UFQ-hp-pqG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="56" id="ijP-3g-6tx"/>
+                <constraint firstItem="bec-Hh-IiR" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="215" id="mKd-Dp-KdZ"/>
+                <constraint firstItem="s7Z-Eb-SgK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="215" id="odi-0t-wjz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="v0f-YO-jZI" secondAttribute="trailing" id="pou-0O-C0f"/>
+                <constraint firstItem="s7Z-Eb-SgK" firstAttribute="leading" secondItem="UFQ-hp-pqG" secondAttribute="trailing" constant="26" id="qGQ-DH-bkE"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="WechatIMG9.png" width="750" height="1334"/>
+    </resources>
 </document>

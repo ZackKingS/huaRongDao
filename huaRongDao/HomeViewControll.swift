@@ -10,9 +10,26 @@ import UIKit
 
 class  HomeViewControll :UIViewController {
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        
+        self.navigationController?.navigationBar.isHidden = true
+        
+        
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.isTranslucent = true
+
+
+//         self.navigationController?.navigationBar.alpha = 0;
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
      
+        
         
         
     }
@@ -25,12 +42,7 @@ class  HomeViewControll :UIViewController {
         vc.cloumn = 3
         vc.zb_Font = 50
         self.navigationController?.pushViewController(vc , animated: true)
-       
-        
-        
-        
-        
-      
+ 
         
     }
     
@@ -40,7 +52,7 @@ class  HomeViewControll :UIViewController {
      
         
         let  vc = ZBViewController()
-        vc.numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+        vc.numbers = [14,2,15,4,5,8,7,6,9,10,12,11,13,1,3]
         vc.cloumn = 4
         vc.zb_Font = 40
         self.navigationController?.pushViewController(vc , animated: true)
@@ -53,7 +65,7 @@ class  HomeViewControll :UIViewController {
         
         
         let  vc = ZBViewController()
-        vc.numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]
+        vc.numbers = [1,2,24,4,5,8,7,6,22,10,11,12,13,14,15,16,17,18,19,20,21,9,23,3]
         vc.cloumn = 5
         vc.zb_Font = 30
         self.navigationController?.pushViewController(vc , animated: true)
